@@ -1,0 +1,609 @@
+* {
+    margin:0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --color-primary: #be26fa;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f7c94b;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #1f2641;
+    --color-bg1: #460553;
+    --color-bg2: #602f81;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+body{
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+    line-height: 1.7;
+    color: var(--color-white);
+    background-color: var(--color-bg);
+}
+.container{
+    width: var(--container-width-lg);
+    margin:0 auto;
+}
+section{
+    padding: 6rem 0;
+}
+section h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+h1,
+h2, 
+h3, 
+h4, 
+h5,
+p{
+    line-height: 1.2;
+}
+p{
+    font-size: 1.4rem;
+}
+h1{
+    font-size: 2.8rem;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 1.6rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+h5{
+    font-size: 1.3rem;
+}
+a{
+    color: var(--color-white);
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+.btn{
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+}
+.btn:hover{
+    background-color:#ee060683;
+    color: var(--color-white);
+    border: var(--color-white);
+}
+.btn-primary{
+    background-color:#ee0606c7;
+    color:#ffffff;
+}
+
+
+
+
+/*====NAVBAR====*/
+
+nav{
+    background-color: #a32ae915;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+/*change navbar styles on scroll using js*/
+.window-scroll{
+    background-color:#a32ae9;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.nav_container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav_container h4{
+    color: rgb(247, 5, 17);
+    font-size: 70px;
+    text-shadow: -1px 1px 0 #f7f5f5,
+        1px 1px 0 #bdbaba,
+        1px -1px 0 #bdbaba,
+        -1px -1px 0 #bdbaba;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+nav button{
+    display: none;
+}
+.nav_menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.nav_menu a{
+    font-size: 1.4rem;
+    transition: var(--transition)
+}
+.nav_menu a:hover{
+    color: var(--color-bg2);
+}
+
+
+
+
+/*====HEADER====*/
+
+header{
+    position: relative;
+    top: 6rem;
+    overflow: hidden;
+    height: 88vh;
+    margin-bottom: 5rem;
+}
+.header_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+.header_left p{
+    margin: 1rem 0 2.4rem;
+}
+.header_right-image img{
+    height: 30rem;
+    width: 30rem;
+}
+
+
+
+
+
+/*====BENEFITS OF READING BOOKS====*/
+
+.categories{
+    background-color: var(--color-bg1);
+    height: 110rem;
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.categories h1{
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+.categories_container{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    /*gap: 4rem;*/
+}
+.categories_left{
+    margin-right: 4rem;
+}
+.categories_left p{
+    margin: 1rem 0 3rem;
+}
+.categories_right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+img{
+    border-radius: 1rem;
+    margin-bottom: .4rem;
+}
+.category{
+    background-color: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+    justify-content: center;
+    align-items: center;
+}
+.category:hover{
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.category_icon{
+    background-color: var(--color-primary);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+    font-size: 2rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.category h5{
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem;
+}
+.category p{
+    font-size: 1.2rem;
+}
+
+
+
+
+/*==== MOST POPULAR TYPES OF BOOKS ====*/
+
+.courses{
+    margin-top: 5rem;
+}
+.courses_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.course{
+    background-color: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    border-radius: 1rem;
+}
+.course:hover{
+    background-color: transparent;
+    border-color: var(--color-primary);
+}
+.course_info{
+    padding: 2rem;
+}
+.course_info p{
+    margin: 1.2rem 0 2rem;
+    font-size: 1.2rem;
+}
+
+
+
+/*==== FAQS ====*/
+
+.faqs{
+    background-color: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+.faqs_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.faq{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+.faq h4{
+    font-size: 1.3rem;
+    line-height: 2.2;
+}
+.faq_icon{
+    align-self: flex-start;
+    font-size: 1.3rem;
+}
+.faq p {
+    margin: 0.8rem;
+    display: none;
+}
+.faq.open p{
+    display: block;
+}
+
+
+
+
+
+/* ==== TESTIMONIALS ==== */
+
+.testimonials_container{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+}
+.testimonial {
+    padding-top: 2rem;
+}
+.avatar{
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border: 1rem solid var(--color-bg1);
+    margin-left: 13.5rem;
+}
+.testimonial_info{
+    text-align: center;
+    margin-left: 3rem;
+}
+.testimonial_body{
+    background-color: var(--color-primary);
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+.testimonial_body::before{
+    content: "";
+    display: block;
+    background: linear-gradient(135deg, transparent, var(--color-primary), var(--color-primary), var(--color-primary));
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    transform: rotate(45deg);
+}
+
+
+
+/*==== FOOTER ==== */
+
+
+.footer {
+    padding: 40px 0;
+    background-color: var(--color-bg2);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #000000;
+}
+.footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #b3b1b1;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+    padding-top:4px;
+}
+.footer .social a:hover{
+    opacity: 0.9;
+}
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color:inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer ul li a:hover{
+    opacity:1;
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: inherit;
+}
+
+
+@media screen and (max-width: 1024px){
+    .container{
+        width: var(--container-width-md);
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    h3{
+        font-size: 1.4rem;
+    }
+    h4{
+        font-size: 1.2rem;
+    }
+
+/*====NAVBAR====*/
+    nav button{
+      display:inline-block;
+      background: transparent;
+      font-size: 1.8rem;
+      color: var(--color-white);
+      cursor: pointer;
+    }
+    nav button#close-menu-btn{
+        display: none;
+    }
+    .nav_menu{
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+    .nav_menu li{
+        width: 100%;
+        height: 5.8rem;
+        animation: animateNavItems 400ms linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+    }
+    .nav_menu li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    .nav_menu li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .nav_menu li:nth-child(4){
+        animation-delay: 600ms;
+    }
+
+    @keyframes animateNavItems{
+        0%{
+            transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+        }
+        100%{
+            transform: rotateZ(0) rotateX(0) scale(1);
+            opacity: 1;
+        }
+    }
+    .nav_menu li a{
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+    .nav_menu li a:hover{
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+
+    /*====HEADER====*/
+
+    header{
+        height: 70vh;
+        margin-bottom: 4rem;
+    }
+    .header_container{
+        gap: 0%;
+        padding-bottom: 3rem;
+    }
+    .header_right-image img{
+        width: 0rem;
+        height: 0rem;
+    }
+
+    /*====CATEGORY==*/
+
+    .categories{
+        height: auto;
+    }
+    .categories_container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .categories_left{
+        margin-right: 0%;
+    }
+    .categories_left img{
+        width:.1rem;
+    }
+
+    /*==== POPULAR TYPES OF BOOKS ====*/
+
+    .courses{
+        margin-top: 0;
+    }
+    .courses_container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*==== FAQS ====*/
+    .faqs_container{
+        grid-template-columns: 1fr;
+    }
+    .faq{
+        padding: 1.5rem;
+    }
+    
+    /*==== TESTIMONIALS ====*/
+    .avatar{
+        margin-left: 6.5rem;
+    }
+}
+
+/*======== MEDIA QUERIES (PHONES)========*/
+@media screen and (max-width: 600px){
+    .container{
+        width: var(--container-width-sm);
+    }
+
+    /*==== NAVBAR ====*/
+    .nav_menu{
+        right: 3%;
+    }
+
+    /*==== HEADER ====*/
+    header{
+        height: 100vh;
+    }
+    .header_container{
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+    .header_left p{
+        margin-bottom: 1.3rem;
+    }
+
+    /*==== CATEGORIES ====*/
+    .categories_right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+    .category{
+        padding: 1rem;
+        border-radius: 1rem;
+        display: inline-block;
+    }
+
+    /*==== POPULAR COURSES====*/
+    .courses_container{
+        grid-template-columns: 1fr;
+    }
+
+    /*==== TESTIMONIALS ====*/
+    .testimonial_body{
+        padding: 1.2rem;
+    }
+    .avatar{
+        margin-left: 11rem;
+    }
+    
+    
+}
+    
+/*==== CONTACT US =====*/
+
+.contact_container{
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 0% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
